@@ -31,5 +31,17 @@ public class Car : MonoBehaviour
          * The Horizontal Axis should make the player rotate on the Vector3.back axis
          */
 
+       // transform.Translate(Vector2.up, * Time.deltaTime *moveSpeed);
+
+        if(verticalInput <= 0)
+        {
+            sr.flipY = true;
+        }
+        else if(verticalInput >= 0)
+        {
+            sr.flipY = false;
+        }
+
+        //transform.Rotate(Vector2.right, * turnSpeed * Time.deltaTime );
     }
 }

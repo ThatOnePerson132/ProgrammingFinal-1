@@ -14,10 +14,18 @@ using UnityEngine;
  */
 
 
-public class ColorPickUp : MonoBehaviour
+public class ColorPickUp : PickUp
 {
     public Sprite newCarColorSprite;
+    public GameObject Player;
 
+    public void Start()
+    {
+        player = GameObject.FindObjectOfType<Car>().GetComponent<Car>();
+    }
 
-
+    public override void Activate()
+    {
+        player.sr.sprite = newCarColorSprite;
+    }
 }
